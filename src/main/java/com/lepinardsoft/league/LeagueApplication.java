@@ -11,7 +11,12 @@ public class LeagueApplication {
 
 	@RequestMapping("/hello")
 	public String home() {
-		return "Hello from Justice League";
+		return "Hello from Justice League!!!! HELLO!!!!";
+	}
+
+	@RequestMapping("/")
+	public String homeRoot() {
+		return "Hello from Justice League's root";
 	}
 
 	public static void main(String[] args) {
