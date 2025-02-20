@@ -1,0 +1,21 @@
+name: Test Upload
+
+on: [push]
+
+jobs:
+  job_1:
+    name: Add 3 and 7
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          expr 3 + 7 > math-homework.txt
+      - name: Upload math result for job 1
+        # uses: aicure/upload-artifact@v2
+        # uses: aicure/actions-upload-artifact@v3
+        # uses: actions/upload-artifact@v4
+        uses: aicure/upload-artifact@v4
+        with:
+          name: homework_pre
+          path: math-homework.txt
+
